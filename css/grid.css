@@ -1,6 +1,6 @@
 /*
   Gridifier || Code released under the UNLICENSE
-  https://gridifier.web-dev.tools/#xs,2,0,0,0;s,2,25,0,0;m,2,38,1,1;l,2,60,0,0
+  https://gridifier.web-dev.tools/#xs,2,0,0,0;s,2,25,0,0;m,2,38,1,1
 */
 
 .grid {
@@ -231,51 +231,6 @@
   .m-1-3,
   .unit-m-2-3,
   .m-2-3 {
-    display: inline-block;
-    visibility: visible;
-  }
-
-}
-
-@media only screen and (min-width: 60em) {
-
-  .unit-l-hidden {
-    display: none;
-    visibility: hidden;
-  }
-
-  .unit-l-centered {
-    margin: 0 auto;
-  }
-
-  .unit-l-1,
-  .l-1 {
-    display: block;
-    visibility: visible;
-    width: 100%;
-  }
-
-  .unit-l-1-2,
-  .l-1-2 {
-    width: 50%;
-  }
-
-  .unit-l-1-3,
-  .l-1-3 {
-    width: 33.3333%;
-  }
-
-  .unit-l-2-3,
-  .l-2-3 {
-    width: 66.6667%;
-  }
-
-  .unit-l-1-2,
-  .l-1-2,
-  .unit-l-1-3,
-  .l-1-3,
-  .unit-l-2-3,
-  .l-2-3 {
     display: inline-block;
     visibility: visible;
   }
