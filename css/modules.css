@@ -1,7 +1,7 @@
 /*
  * Modulifier || Code released under the UNLICENSE
  * Code under other copyrights & licenses listed below.
- * https://modulifier.web-dev.tools/#responsive;images;list-group;embed;media-object;accessibility
+ * https://modulifier.web-dev.tools/#responsive;images;list-group;embed;positioning
  */
 
 @-moz-viewport { width: device-width; scale: 1; }
@@ -208,84 +208,147 @@ svg.img-flex {
   width: 100%;
 }
 
-.media {
-  overflow: hidden;
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.media-img, .media__img {
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.left {
   float: left;
 }
 
-.media-img-reversed, .media__img--reversed {
+.right {
   float: right;
 }
 
-.media-img-stacked, .media__img--stacked {
-  float: none;
+.inline {
+  display: inline;
 }
 
-.media-body, .media__body {
-  overflow: hidden;
-  min-width: 12em; /* Slightly less than 200px, responsiveness built in */
+.block {
+  display: block;
 }
 
-a:hover, a:active {
-  outline: none;
+.inline-block, .ib {
+  display: inline-block;
 }
 
-a:focus,
-[tabindex="0"]:focus,
-details:focus,
-summary:focus,
-input:focus,
-textarea:focus,
-button:focus,
-select:focus {
-  outline: 3px solid #000;
+.valign-top {
+  vertical-align: top;
 }
 
-a:focus, [tabindex="0"]:focus {
-  outline-offset: 3px;
+.valign-bottom {
+  vertical-align: bottom;
 }
 
-.skip-links {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.valign-middle {
+  vertical-align: middle;
 }
 
-.skip-links > li::before {
-  content: none; /* Remove the bullets if nice lists is selected */
+.fixed {
+  position: fixed;
 }
 
-.skip-links a,
-.skip-links button {
-  padding: .5em .75em;
+.relative {
+  position: relative;
+}
+
+.absolute {
   position: absolute;
-  top: -10em;
-  z-index: 10000; /* To make sure they're always on top */
-  background-color: #000;
-  border: 0;
-  color: #fff;
-  font-size: 1.125rem;
-  font-weight: bold;
-  text-decoration: none;
 }
 
-.skip-links a:focus,
-.skip-links button:focus {
-  outline-offset: 3px;
+.static {
+  position: static;
+}
+
+.zindex-1 {
+  z-index: 1;
+}
+
+.zindex-2 {
+  z-index: 2;
+}
+
+.zindex-3 {
+  z-index: 3;
+}
+
+.pin-top-left, .pin-tl {
   top: 0;
+  left: 0;
 }
 
-[aria-busy="true"] {
-  cursor: progress;
+.pin-top-right, .pin-tr {
+  top: 0;
+  right: 0;
 }
 
-[aria-controls] {
-  cursor: pointer;
+.pin-bottom-left, .pin-bl {
+  bottom: 0;
+  left: 0;
 }
 
-[aria-disabled] {
-  cursor: default;
+.pin-bottom-right, .pin-br {
+  bottom: 0;
+  right: 0;
+}
+
+.pin-top-center, .pin-tc {
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.pin-bottom-center, .pin-bc {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pin-center-left, .pin-cl {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pin-center-right, .pin-cr {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pin-center, .pin-c {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.width-quarter, .w-1-4 {
+  width: 25%;
+}
+
+.width-half, .w-1-2 {
+  width: 50%;
+}
+
+.width-full, .w-1 {
+  width: 100%;
+}
+
+.height-quarter, .h-1-4 {
+  height: 25%;
+}
+
+.height-half, .h-1-2 {
+  height: 50%;
+}
+
+.height-full, .h-1 {
+  height: 100%;
 }
